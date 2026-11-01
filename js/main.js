@@ -61,17 +61,76 @@ $(function () {
     hand.classList.remove("wave");
   });
 
-  window.sr = ScrollReveal({
-    reset: false,
-    duration: 600,
-    easing: "cubic-bezier(.694,0,.335,1)",
-    scale: 1,
-    viewFactor: 0.3,
-  });
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-  sr.reveal(".background");
-  sr.reveal(".skills");
-  sr.reveal(".experience", { viewFactor: 0.2 });
-  sr.reveal(".featured-projects", { viewFactor: 0.1 });
-  sr.reveal(".other-projects", { viewFactor: 0.05 });
+  if (!reduceMotion && window.ScrollReveal) {
+    window.sr = ScrollReveal({
+      reset: false,
+      distance: "32px",
+      duration: 800,
+      easing: "cubic-bezier(.694,0,.335,1)",
+      opacity: 0,
+      scale: 1,
+      viewFactor: 0.15,
+      mobile: true,
+    });
+
+    sr.reveal(".section__title", {
+      origin: "left",
+      distance: "24px",
+      duration: 650,
+    });
+
+    sr.reveal(
+      ".background .section__content > p, .background .section__content > a",
+      { origin: "bottom", interval: 90 }
+    );
+
+    sr.reveal(".skillz__category", { origin: "bottom", interval: 90 });
+    sr.reveal(".job", { origin: "bottom", interval: 80, viewFactor: 0.12 });
+    sr.reveal(".project", { origin: "bottom", interval: 90, viewFactor: 0.12 });
+    sr.reveal(".section__content ul.plain li", {
+      origin: "bottom",
+      interval: 80,
+    });
+    sr.reveal(".My_timeline .timeline", {
+      origin: "bottom",
+      distance: "24px",
+      viewFactor: 0.2,
+    });
+    sr.reveal(".footer", { origin: "bottom", distance: "16px", viewFactor: 0.3 });
+  }
+
+  const timeline = document.querySelector(".timeline");
+  if (timeline) {
+    const updateTimelineEnds = function () {
+      const max = timeline.scrollWidth - timeline.clientWidth;
+      timeline.classList.toggle("can-scroll-prev", timeline.scrollLeft > 2);
+      timeline.classList.toggle("can-scroll-next", max > 2 && timeline.scrollLeft < max - 2);
+    };
+
+    updateTimelineEnds();
+    timeline.addEventListener("scroll", updateTimelineEnds, { passive: true });
+    window.addEventListener("resize", updateTimelineEnds);
+
+    timeline.addEventListener(
+      "wheel",
+      function (event) {
+        const max = timeline.scrollWidth - timeline.clientWidth;
+        if (max <= 0) return;
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        const atStart = timeline.scrollLeft <= 0;
+        const atEnd = timeline.scrollLeft >= max - 1;
+        if ((event.deltaY < 0 && atStart) || (event.deltaY > 0 && atEnd)) return;
+        event.preventDefault();
+        timeline.scrollLeft = Math.max(
+          0,
+          Math.min(max, timeline.scrollLeft + event.deltaY)
+        );
+      },
+      { passive: false }
+    );
+  }
 });
