@@ -27,6 +27,11 @@
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
     <meta property="og:image:type" content="image/png" />
+    <script>
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("night");
+      }
+    </script>
     <meta name="author" content="Raj Bagaria" />
     <meta property="og:locale" content="en_US" />
     <!-- verify site ownership -->
@@ -35,7 +40,7 @@
       href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.css" hreflang="en-us" />
+    <link rel="stylesheet" href="./css/main.css?v=counting3" hreflang="en-us" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -53,11 +58,18 @@
         <div class="toggle-wrapper">
           <input id="switch" type="checkbox" />
           <label for="switch" id="toggle">Toggle</label>
+          <script>
+            if (document.documentElement.classList.contains("night")) {
+              document.body.classList.add("night");
+              document.getElementById("switch").checked = true;
+            }
+          </script>
         </div>
         <div class="moon"></div>
       </div>
 
       <header class="intro">
+        <div class="intro__copy">
         <h1 class="intro__hello">
           Hello! <span class="emoji wave-hand animated"></span>
           <span>
@@ -74,6 +86,20 @@
           Wayfair, and I build full-stack and blockchain products on the side.
           <span class="emoji technologist"></span>
         </h2>
+        <ul class="intro__stats" id="github-stats">
+          <li>
+            <strong data-stat="projects">—</strong>
+            <span>projects</span>
+          </li>
+          <li>
+            <strong
+              data-stat="lines"
+              title="Source lines on the default branch of public repositories, excluding dependencies and generated files."
+              >—</strong
+            >
+            <span>lines and counting</span>
+          </li>
+        </ul>
         <h3 class="intro__contact">
           <span>Get in touch with me</span>
           <span class="emoji pointer"></span>
@@ -93,6 +119,14 @@
             >
           </span>
         </h3>
+        </div>
+        <img
+          class="intro__photo"
+          src="./img/raj-bagaria.jpg"
+          alt="Raj Bagaria"
+          width="800"
+          height="800"
+        />
       </header>
 
       <section class="section background">
@@ -634,5 +668,6 @@
     ></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/github-stats.js?v=scramble2" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
