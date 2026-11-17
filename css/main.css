@@ -1135,6 +1135,62 @@ html.night .intro__stats strong {
     margin-bottom: 50px
 }
 
+.hackathon {
+    margin-bottom: 48px
+}
+
+.hackathon__event {
+    margin-bottom: 8px;
+    font-family: Inconsolata, monospace;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #007bff
+}
+
+.hackathon .project {
+    max-width: 600px;
+    margin-bottom: 0
+}
+
+.hackathon__photo {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin-top: 16px;
+    border-radius: 8px
+}
+
+@media screen and (min-width:1200px) {
+    .hackathons .section__content {
+        max-width: 980px
+    }
+
+    .hackathon--photo {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px
+    }
+
+    .hackathon--photo .hackathon__copy {
+        flex: 1;
+        min-width: 0
+    }
+
+    .hackathon--photo .project {
+        max-width: none
+    }
+
+    .hackathon__photo {
+        width: 280px;
+        max-width: none;
+        margin-top: 28px;
+        flex: none
+    }
+}
+
 .other-projects .project__name {
     margin-bottom: 10px
 }
