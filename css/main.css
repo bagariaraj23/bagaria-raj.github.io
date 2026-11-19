@@ -922,7 +922,35 @@ html.night .intro__stats strong {
 }
 
 .experience .job__company {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 700
+}
+
+.experience .job__logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 28px;
+    flex: none;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    background: #fff;
+    border-radius: 4px
+}
+
+.experience .job__logo-link:hover,
+.experience .job__logo-link:focus-visible {
+    box-shadow: 0 0 0 2px #007bff
+}
+
+.experience .job__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center
 }
 
 .experience .job__time {
