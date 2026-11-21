@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Snaps — Raj Bagaria</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./img/emojis/newdp3.png"
+      hreflang="en-us"
+    />
+    <meta property="og:title" content="Snaps — Raj Bagaria" />
+    <meta
+      property="og:description"
+      content="Collected on the road. Fog, water, a temple, and a long terminal."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raj Bagaria" />
+    <script>
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("night");
+      }
+    </script>
+    <meta name="author" content="Raj Bagaria" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css?v=snaps2" hreflang="en-us" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div id="site">
+      <div class="switch-wrapper">
+        <div class="sun"></div>
+        <div class="toggle-wrapper">
+          <input id="switch" type="checkbox" />
+          <label for="switch" id="toggle">Toggle</label>
+          <script>
+            if (document.documentElement.classList.contains("night")) {
+              document.body.classList.add("night");
+              document.getElementById("switch").checked = true;
+            }
+          </script>
+        </div>
+        <div class="moon"></div>
+      </div>
+
+      <header class="snaps-bar">
+        <a class="snaps-bar__name" href="index.html">Raj Bagaria</a>
+        <span class="snaps-bar__here">Snaps</span>
+      </header>
+
+      <main class="snaps">
+        <div class="snaps-lead">
+          <div class="snaps-lead__copy">
+            <p class="snaps-kicker">Snaps</p>
+            <h1>Away from the desk.</h1>
+            <p>
+              Collected on the road. Fog, water, a temple, and a long terminal.
+            </p>
+            <a class="arrow-link" href="index.html">Back to the work</a>
+          </div>
+          <figure class="snap snap--lead">
+            <button
+              type="button"
+              class="snap__open"
+              data-caption="Under the coffers"
+            >
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/01-coffers.jpg"
+                  alt="A night departure lane under a coffered ceiling, with an ornate street clock and a yellow information sign."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">01</span>
+                <span class="snap__caption">Under the coffers</span>
+              </span>
+            </button>
+          </figure>
+        </div>
+
+        <div class="snaps-grid">
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="Turned 25, amidst the fog">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/02-turn-ten.jpg"
+                  alt="Raj standing by a silver car in hill fog, with a Turn 10 sign behind him."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">02</span>
+                <span class="snap__caption">Turned 25, amidst the fog</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="Caught in the mirror">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/03-mirror.jpg"
+                  alt="A side-mirror reflection of Raj taking a photo from the passenger seat, with green trees behind the car."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">03</span>
+                <span class="snap__caption">Caught in the mirror</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="The path keeps going">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/04-trail.jpg"
+                  alt="A rocky dirt path curving through dense green forest under a pale sky."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">04</span>
+                <span class="snap__caption">The path keeps going</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="A log over the falls">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/05-falls.jpg"
+                  alt="Raj sitting on a fallen log above a stream, with a small waterfall and overhanging leaves behind him."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">05</span>
+                <span class="snap__caption">A log over the falls</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap snap--wide">
+            <button type="button" class="snap__open" data-caption="Arms out to the water">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/06-open-hands.jpg"
+                  alt="Raj standing on dark rocks by the sea with both hands open, under a cloudy sky."
+                  width="1024"
+                  height="768"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">06</span>
+                <span class="snap__caption">Arms out to the water</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="The spray got there first">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/07-spray.jpg"
+                  alt="Raj on a rocky breakwater, one hand on his sunglasses, as a wave breaks behind him."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">07</span>
+                <span class="snap__caption">The spray got there first</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="Watching the next one">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/08-looking-out.jpg"
+                  alt="Raj on the rocks looking toward a tall splash of seawater."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">08</span>
+                <span class="snap__caption">Watching the next one</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="Before they burn">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/09-effigies.jpg?v=crop"
+                  alt="Two tall, brightly painted effigies standing in an open field in front of apartment blocks."
+                  width="576"
+                  height="640"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">09</span>
+                <span class="snap__caption">Before they burn</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap">
+            <button type="button" class="snap__open" data-caption="Marble, flowers, the power supreme">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/10-marble.jpg"
+                  alt="People waiting inside a white marble shrine hung with flower garlands, facing a lit sanctum."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">10</span>
+                <span class="snap__caption">Marble, flowers, the power supreme</span>
+              </span>
+            </button>
+          </figure>
+
+          <figure class="snap snap--end">
+            <button type="button" class="snap__open" data-caption="Still lit at dusk">
+              <span class="snap__media">
+                <img
+                  src="./img/snaps/11-red-cross.jpg"
+                  alt="A white church steeple with a glowing red cross, beside a palm tree at dusk."
+                  width="768"
+                  height="1024"
+                />
+              </span>
+              <span class="snap__meta">
+                <span class="snap__index">11</span>
+                <span class="snap__caption">Still lit at dusk</span>
+              </span>
+            </button>
+          </figure>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__copyright">
+          <div class="top">
+            <span>Designed &amp; Developed by</span>
+          </div>
+          <div class="bottom">
+            <span>Raj Bagaria</span>
+            <img class="emoji" src="./img/emojis/rockon.png" alt="emoji" />
+            <span> | 2026</span>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="mailto:bagariaraj23@gmail.com" target="_blank" title="email">
+            <span class="text">email</span>
+            <img src="./img/social/email.svg" alt="email" />
+          </a>
+          <a
+            href="https://www.instagram.com/bagaria_raj23/"
+            target="_blank"
+            title="instagram"
+          >
+            <span class="text">instagram</span>
+            <img src="./img/social/instagram.svg" alt="instagram" />
+          </a>
+          <a
+            href="https://github.com/bagariaraj23"
+            target="_blank"
+            title="github"
+          >
+            <span class="text">github</span>
+            <img src="./img/social/github.svg" alt="github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/raj-bagaria/"
+            target="_blank"
+            title="linkedin"
+          >
+            <span class="text">linkedin</span>
+            <img src="./img/social/linkedin.svg" alt="linkedin" />
+          </a>
+        </div>
+      </footer>
+
+      <button id="top-button">
+        <img src="./img/emojis/pointing-up.png" alt="" />
+      </button>
+
+      <dialog id="snap-dialog" class="snap-dialog" aria-label="Snap">
+        <div class="snap-dialog__stage">
+          <button type="button" class="snap-dialog__close" data-close>
+            Close
+          </button>
+          <button type="button" class="snap-dialog__nav" data-prev aria-label="Previous snap">
+            <span aria-hidden="true">←</span>
+          </button>
+          <figure class="snap-dialog__figure">
+            <img id="snap-dialog-img" alt="" />
+            <figcaption class="snap__meta">
+              <span class="snap__index" id="snap-dialog-index"></span>
+              <span class="snap__caption" id="snap-dialog-caption"></span>
+            </figcaption>
+          </figure>
+          <button type="button" class="snap-dialog__nav" data-next aria-label="Next snap">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </dialog>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/snaps.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

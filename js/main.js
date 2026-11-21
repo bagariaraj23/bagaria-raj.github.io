@@ -24,7 +24,8 @@ $(function () {
     document.documentElement.classList.toggle("night", night);
   });
 
-  const introHeight = document.querySelector(".intro").offsetHeight;
+  const intro = document.querySelector(".intro");
+  const introHeight = intro ? intro.offsetHeight : 420;
   const topButton = document.getElementById("top-button");
   const $topButton = $("#top-button");
 
@@ -46,24 +47,26 @@ $(function () {
 
   const hand = document.querySelector(".emoji.wave-hand");
 
-  function waveOnLoad() {
-    hand.classList.add("wave");
+  if (hand) {
+    function waveOnLoad() {
+      hand.classList.add("wave");
+      setTimeout(function () {
+        hand.classList.remove("wave");
+      }, 2000);
+    }
+
     setTimeout(function () {
+      waveOnLoad();
+    }, 1000);
+
+    hand.addEventListener("mouseover", function () {
+      hand.classList.add("wave");
+    });
+
+    hand.addEventListener("mouseout", function () {
       hand.classList.remove("wave");
-    }, 2000);
+    });
   }
-
-  setTimeout(function () {
-    waveOnLoad();
-  }, 1000);
-
-  hand.addEventListener("mouseover", function () {
-    hand.classList.add("wave");
-  });
-
-  hand.addEventListener("mouseout", function () {
-    hand.classList.remove("wave");
-  });
 
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -105,6 +108,8 @@ $(function () {
       viewFactor: 0.2,
     });
     sr.reveal(".footer", { origin: "bottom", distance: "16px", viewFactor: 0.3 });
+    sr.reveal(".snaps-lead__copy", { origin: "bottom", distance: "20px" });
+    sr.reveal(".snap", { origin: "bottom", interval: 70, viewFactor: 0.08 });
   }
 
   const timeline = document.querySelector(".timeline");
